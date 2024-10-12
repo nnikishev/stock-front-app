@@ -1,9 +1,58 @@
 .App {
   text-align: center;
-  background-color: rgb(9, 44, 44);
+  background-color: rgb(255, 255, 255);
 }
 
 .carousel-div {
-  height: 60%;
+  height: 95vh;
   width: 100%;
+}
+
+.carousel {
+  height: inherit;
+}
+
+.carousel-inner {
+  height: inherit;
+}
+
+.carousel-item {
+  height: inherit;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.filters-button {
+  margin: 20px;
+  /* align-self: flex-end; */
+}
+.cards {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+}
+.carousel-item h3 {
+  font-size: 60px;
+  color: white;
+  text-shadow: 1 1 10px #000000;
+  transition: color;
+}
+
+.carousel-item h3:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 4px 5px black, 1px 4px 5px white;
+}
+
+.carousel-item p {
+  font-size: 24px;
+  color: white;
+  text-shadow: 0 0 5px #000000;
+}
+
+.carousel-item p:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 4px 5px black, 1px 4px 5px white;
 }

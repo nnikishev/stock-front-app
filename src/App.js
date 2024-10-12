@@ -1,22 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import '@flaticon/flaticon-uicons/css/bold/all.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ControlledCarousel from './components/carousel';
-import BasicNavbar from './components/navbar';
+import MainLayout from './components/layouts/home/HomeLayout';
+import AboutLayout from './components/layouts/about/AboutLayout';
+import GoodsLayout from './components/layouts/goods/goods';
 
 function App() {
   return (
   <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-       <BasicNavbar />
-      </header>
-      <body>
         <Routes>
-          <Route path="/" element={<ControlledCarousel />}> </Route>
-          <Route path='about' element={<h1>about</h1>}> </Route>
+          <Route path="/" element={<MainLayout />}> </Route>
+          <Route path='about' element={<AboutLayout />}> </Route>
+          <Route path='products' element={<GoodsLayout/>}></Route>
         </Routes>
-      </body>
     </div>
   </BrowserRouter>
   );

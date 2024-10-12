@@ -31,7 +31,7 @@ function ControlledCarousel() {
   } else if (!isLoaded) {
     return <div>Loading...</div>;
   } else {
-    return (
+    return ( <div className='carousel-div'>
     <Carousel activeIndex={index} onSelect={handleSelect}>
         {items.map((item, index) => (
         <Carousel.Item key={index}>
@@ -43,6 +43,7 @@ function ControlledCarousel() {
         </Carousel.Item>)
     )}
     </Carousel>
+    </div>
   );
 }
 };
