@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import BasicNavbar from "../../navbar/navbar"
-import ContactForm from "./ContactUsForm"
+import ContactForm from "./children/ContactUsForm"
 import { BsFillPhoneVibrateFill } from "react-icons/bs";
 import { FaMailBulk } from "react-icons/fa";
 import { YMaps, Map, FullscreenControl, TypeSelector, Placemark } from '@pbe/react-yandex-maps';

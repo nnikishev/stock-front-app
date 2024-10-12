@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 function ProductCard() {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{height:'inherit', width: 'inherit' }}>
       <Card.Img 
        variant="top"
        src=""
