@@ -1,25 +1,18 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import React from 'react';
 
-function ProductCard() {
-  return (
-    <Card style={{height:'inherit', width: 'inherit' }}>
-      <Card.Img 
-       variant="top"
-       src=""
-       height={"100%"}
-       width={"100%"}
-       objectFit={"fill"} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-  );
-}
+const ProductCard = ({ product }) => {
+    return (
+        <div className="col-md-3 mb-4">
+            <div className="card">
+                <img src={product.attachments[0]} className="card-img-top" alt={product.name} />
+                <div className="card-body">
+                    <h5 className="card-title">{product.name}</h5>
+                    <p className="card-text">{product.description}</p>
+                    <p className="font-weight-bold">Цена: {product.price} Р</p>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default ProductCard;

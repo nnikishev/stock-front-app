@@ -1,20 +1,30 @@
 import { useEffect, useState } from 'react';
+import { useCookies } from 'react-cookie';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import LoginForm from './children/LoginForm';
 import LoginModal from './children/LoginModal';
 
 function BasicNavbar() {
     const [modalShow, setModalShow] = useState(false);
+    const [cookies, setCookie, removeCookie] = useCookies(['token']);
+    const style = {
+      display: cookies.token ? 'none' : 'block', // Invisible if cookie exists
+  };
+    const unstyle = {
+      display: !cookies.token ? 'none' : 'block', // Invisible if cookie exists
+  };
     const [info, setInfo] = useState([])
     useEffect(() => {
         fetch("http://127.0.0.1:8000/api/settings/get_by_name/title/")
         .then((response) => response.json())
         .then((json) => setInfo(json))
 }, [])
+  function logout() { 
+    removeCookie(["token"])
+  }
+  // console.log(cookies)
+  // console.log(cookies.token)
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -29,10 +39,10 @@ function BasicNavbar() {
             </Nav>
             <Nav className="justify-content-end" activeKey="/home">
           <Nav.Item>
-            <Nav.Link onClick={() => setModalShow(true)}>Вход</Nav.Link>
+            <Nav.Link style= {style} onClick={() => setModalShow(true)} >Вход</Nav.Link>
 
             <LoginModal
-              
+
               show={modalShow}
               onHide={() => setModalShow(false)}
             />
@@ -49,7 +59,8 @@ function BasicNavbar() {
               </Modal> */}
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="regisration">Регистрация</Nav.Link>
+            <Nav.Link style= {style} href="regisration">Регистрация</Nav.Link>
+            <Nav.Link style= {unstyle} onClick={() => logout()}>Выход</Nav.Link>
           </Nav.Item>
           </Nav>
         </Navbar.Collapse>

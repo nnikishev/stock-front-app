@@ -14,7 +14,6 @@ function AboutLayout() {
         .then((response) => response.json())
         .then((json) => setInfo(json))
     }, [])
-    console.log(info)
 
     return ( <>
         <header className="App-header">

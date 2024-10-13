@@ -5,6 +5,9 @@
     border-radius: 8px;
     border: 0 solid blue;
     transform: background-color;
+    position: relative;
+    width: 12rem;
+    left: 40%;
 }
 
 .submitButton:hover {

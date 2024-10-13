@@ -1,16 +1,16 @@
 import {useState} from 'react'
 
-const LoginForm = ({ onLogin, onHide }) => {
-    const [username, setUsername] = useState('');
+const LoginForm = ({ onLogin }) => {
+    const [name, setName] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevent the default form submission
         // Pass the username and password back to the parent component
-        onLogin(username, password);
+        onLogin(name, password);
         // Reset fields (optional)
-        setUsername('');
-        setPassword('');
+        // setName('');
+        // setPassword('');
     };
 
     return (
@@ -21,8 +21,8 @@ const LoginForm = ({ onLogin, onHide }) => {
                 <input
                     className='input'
                     type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     required
                 />
             </label>

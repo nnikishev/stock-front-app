@@ -1,4 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css'; // or include from a CDN
+import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import './App.css';
 import '@flaticon/flaticon-uicons/css/bold/all.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';

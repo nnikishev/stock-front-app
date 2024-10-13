@@ -39,9 +39,27 @@
   transform: scale(1.05);
 }
 
-  .h1 {
+.h1 {
     padding-top: 20px;
     padding-left: 300px;
     text-align: center;
     font-size: 40px;
   }
+
+
+body {
+    background-color: #f8f9fa; /* Light background color */
+  }
+  
+.card {
+    transition: transform 0.2s; /* Animation for hover effect */
+    height: 500px;
+  }
+  
+.card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+
+.range-slider {
+    margin-bottom: 20px;
+}
