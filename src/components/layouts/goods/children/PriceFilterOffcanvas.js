@@ -14,7 +14,7 @@ const PriceFilterOffcanvas = ({ show, handleClose, minPrice, setMinPrice, maxPri
                 <RangeSlider
                     value={minPrice}
                     min={0}
-                    max={2000} // Adjust according to your product price range
+                    max={65535} // Adjust according to your product price range
                     onChange={e => setMinPrice(parseInt(e.target.value))}
                     tooltipPlacement="top"
                     tooltip={"on"}
@@ -24,7 +24,7 @@ const PriceFilterOffcanvas = ({ show, handleClose, minPrice, setMinPrice, maxPri
                 <RangeSlider
                     value={maxPrice}
                     min={0}
-                    max={2000} // Adjust according to your product price range
+                    max={65535} // Adjust according to your product price range
                     onChange={e => setMaxPrice(parseInt(e.target.value))}
                     tooltipPlacement="top"
                     tooltip={"on"}

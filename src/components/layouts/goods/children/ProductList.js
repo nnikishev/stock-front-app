@@ -8,9 +8,9 @@ import "../styles.css"
 
 const ProductList = ({ products }) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(4); // Number of products per page
+    const [itemsPerPage] = useState(8); // Number of products per page
     const [minPrice, setMinPrice] = useState(0);
-    const [maxPrice, setMaxPrice] = useState(2000); // Set a default maximum price based on your product range
+    const [maxPrice, setMaxPrice] = useState(65365); // Set a default maximum price based on your product range
     const [showOffcanvas, setShowOffcanvas] = useState(false);
 
     const handleShow = () => setShowOffcanvas(true);
@@ -62,6 +62,11 @@ const ProductList = ({ products }) => {
                     <li className={`page-item ${currentPage >= totalPages && 'disabled'}`}>
                         <button className="page-link" onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage >= totalPages}>
                             След
+                        </button>
+                    </li>
+                    <li className={`page-item disabled'}`}>
+                        <button className="page-link" disabled={true}>
+                            Всего: {indexOfLastProduct}
                         </button>
                     </li>
                 </ul>
