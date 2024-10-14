@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.304852dd.css",
+    "main.js": "/static/js/main.7e3f22e3.js",
+    "static/js/453.2fc3dcff.chunk.js": "/static/js/453.2fc3dcff.chunk.js",
+    "static/media/uicons-bold-rounded-CPL6VNRV.eot": "/static/media/uicons-bold-rounded-CPL6VNRV.81561c67697fc09f050b.eot",
+    "static/media/uicons-bold-straight-UHOZTY66.eot": "/static/media/uicons-bold-straight-UHOZTY66.1023d9a6529a9e7732a6.eot",
+    "static/media/uicons-bold-rounded-UTQQXXF3.woff": "/static/media/uicons-bold-rounded-UTQQXXF3.4a23c5df30d392803f73.woff",
+    "static/media/uicons-bold-straight-3S6L5GRX.woff": "/static/media/uicons-bold-straight-3S6L5GRX.23c3fe173e1cadadc8ae.woff",
+    "static/media/uicons-bold-rounded-MQNABNC6.woff2": "/static/media/uicons-bold-rounded-MQNABNC6.f1fa27ef1cfbccecbdcf.woff2",
+    "static/media/image.png": "/static/media/image.318536ee53dd63de0b49.png",
+    "static/media/uicons-bold-straight-3JAZKD6K.woff2": "/static/media/uicons-bold-straight-3JAZKD6K.31682537723a048ab69e.woff2",
+    "index.html": "/index.html",
+    "main.304852dd.css.map": "/static/css/main.304852dd.css.map",
+    "main.7e3f22e3.js.map": "/static/js/main.7e3f22e3.js.map",
+    "453.2fc3dcff.chunk.js.map": "/static/js/453.2fc3dcff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.304852dd.css",
+    "static/js/main.7e3f22e3.js"
+  ]
+}
