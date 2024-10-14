@@ -66,7 +66,7 @@ const ProductList = ({ products }) => {
                     </li>
                     <li className={`page-item disabled'}`}>
                         <button className="page-link" disabled={true}>
-                            Всего: {indexOfLastProduct}
+                            Всего: {filteredProducts.length}
                         </button>
                     </li>
                 </ul>
