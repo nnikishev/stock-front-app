@@ -11,7 +11,8 @@ function ControlledCarousel() {
     setIndex(selectedIndex);
     };
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/carousel-items/")
+    console.log(`${process.env.SETTINGS_API_URL}/api/carousel-items/`)
+    fetch(`http://194.87.213.123:8000/api/carousel-items/`)
       .then(res => res.json())
       .then(
         (result) => {

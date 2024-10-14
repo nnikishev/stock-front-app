@@ -11,7 +11,7 @@ import image from './image.png'
 function AboutLayout() {
     const [info, setInfo] = useState([])
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/settings/get_by_name/about/")
+        fetch("http://194.87.213.123:8000/api/settings/get_by_name/about/")
         .then((response) => response.json())
         .then((json) => setInfo(json))
     }, [])

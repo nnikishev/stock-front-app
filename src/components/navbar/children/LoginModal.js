@@ -11,7 +11,7 @@ function LoginModal(props) {
     const handleLogin = async (name, password) => {
         // console.log('Username:', name);
         // console.log('Password:', password);
-        const response = await fetch('http://localhost:8091/api/login', {
+        const response = await fetch('http://194.87.213.123:8091/api/login', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',

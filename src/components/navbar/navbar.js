@@ -16,15 +16,13 @@ function BasicNavbar() {
   };
     const [info, setInfo] = useState([])
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/settings/get_by_name/title/")
+        fetch("http://194.87.213.123:8000/api/settings/get_by_name/title/")
         .then((response) => response.json())
         .then((json) => setInfo(json))
 }, [])
   function logout() { 
     removeCookie(["token"])
   }
-  // console.log(cookies)
-  // console.log(cookies.token)
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -46,17 +44,6 @@ function BasicNavbar() {
               show={modalShow}
               onHide={() => setModalShow(false)}
             />
-              {/* <Modal show={show} onHide={handleClose} animation={false}>
-                <Modal.Header closeButton>
-                  <Modal.Title>Авторизация</Modal.Title>
-                </Modal.Header>
-                <Modal.Body><LoginForm/></Modal.Body>
-                <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
-                    Close
-                  </Button>
-                </Modal.Footer>
-              </Modal> */}
           </Nav.Item>
           <Nav.Item>
             <Nav.Link style= {style} href="regisration">Регистрация</Nav.Link>
