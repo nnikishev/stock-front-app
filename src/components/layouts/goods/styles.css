@@ -64,7 +64,7 @@
 
 .filter-button {
   display: block;
-  margin: 30px;
+  margin: 15px;
   padding: 7px;
   width: 120px;
   background-color: lightgray;
@@ -76,4 +76,32 @@
 
 .filter-button:hover {
   transform: scale(1.05);
+}
+
+.card {
+  margin: 15px;
+  padding: 7px;
+  background-color: lightgray;
+  border-radius: 8px;
+}
+
+.card h2 {
+  margin: 15px;
+}
+
+.card-body {
+  padding: 20px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.product-desc-images {
+  width: 80%;
+
+}
+
+.product-desc-images img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
 }

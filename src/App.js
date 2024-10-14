@@ -5,7 +5,8 @@ import '@flaticon/flaticon-uicons/css/bold/all.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainLayout from './components/layouts/home/HomeLayout';
 import AboutLayout from './components/layouts/about/AboutLayout';
-import GoodsLayout from './components/layouts/goods/goods';
+import GoodsLayout from './components/layouts/goods/productsList';
+import ProductDetail from './components/layouts/goods/productDetail';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<MainLayout />}> </Route>
           <Route path='about' element={<AboutLayout />}> </Route>
           <Route path='products' element={<GoodsLayout/>}></Route>
+          <Route path='products/:uuid' element={<ProductDetail/>}></Route>
         </Routes>
     </div>
   </BrowserRouter>
