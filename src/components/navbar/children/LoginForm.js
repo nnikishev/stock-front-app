@@ -12,12 +12,17 @@ const LoginForm = ({ onLogin }) => {
         // setName('');
         // setPassword('');
     };
-
+    const handleKeyPress = (event) => {
+        if(event.key === 'Enter'){
+          console.log('enter press here! ')
+          onLogin(name, password);
+        }
+      }
     return (
         <form onSubmit={handleSubmit}>
         <div className='input'>
             <label className='loginLabel'>
-                Username:
+                Login:
                 <input
                     className='input'
                     type="text"
@@ -29,7 +34,7 @@ const LoginForm = ({ onLogin }) => {
         </div>
         <div className='input'>
             <label className='loginLabel'>
-                Password:  
+                Пароль:  
                 <input
                     className='input'
                     type="password"

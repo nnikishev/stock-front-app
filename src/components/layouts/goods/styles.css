@@ -17,6 +17,10 @@
   transform: scale(1.05);
 }
 
+.card-item img {
+  height: 280px;
+  object-fit: cover;
+}
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
@@ -46,20 +50,29 @@
     font-size: 40px;
   }
 
-
-body {
-    background-color: #f8f9fa; /* Light background color */
-  }
-  
-.card {
-    transition: transform 0.2s; /* Animation for hover effect */
-    height: 500px;
-  }
-  
-.card:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-  }
-
 .range-slider {
     margin-bottom: 20px;
+}
+
+.used-filters {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px lightgray;
+  width: 250px;
+}
+
+.filter-button {
+  display: block;
+  margin: 30px;
+  padding: 7px;
+  width: 120px;
+  background-color: lightgray;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  box-shadow: 0 2px 10px lightgray;
+  transition: transform 0.2s;
+}
+
+.filter-button:hover {
+  transform: scale(1.05);
 }

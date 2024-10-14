@@ -4,6 +4,7 @@ import ProductCard from './ProductCard';
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css'; // Import the CSS
 import PriceFilterOffcanvas from './PriceFilterOffcanvas';
 import { Button } from 'react-bootstrap';
+import "../styles.css"
 
 const ProductList = ({ products }) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -28,9 +29,9 @@ const ProductList = ({ products }) => {
 
     return (<>
         <div className="container">
-            <Button className="filter-button" variant="primary" onClick={handleShow}>
+            <button className="filter-button" variant="primary" onClick={handleShow}>
                 Фильтры
-            </Button>
+            </button>
 
             <PriceFilterOffcanvas 
                 show={showOffcanvas} 
@@ -41,13 +42,13 @@ const ProductList = ({ products }) => {
                 setMaxPrice={setMaxPrice} 
             />
 
-            <div>
+            <div className='used-filters' >
                 <p>Цена: {minPrice} - {maxPrice} P</p>
             </div>
 
             <div className="row">
                 {currentProducts.map((product, index) => (
-                    <ProductCard key={index} product={product} />
+                    <ProductCard style={{ height: 'inherit'}} key={index} product={product} />
                 ))}
             </div>
 

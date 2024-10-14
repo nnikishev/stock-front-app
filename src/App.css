@@ -25,15 +25,6 @@
   width: 100%;
   object-fit: cover;
 }
-.filters-button {
-  margin: 20px;
-  /* align-self: flex-end; */
-}
-.cards {
-  display: flex;
-  margin: 20px;
-  padding: 20px;
-}
 .carousel-item h3 {
   font-size: 60px;
   color: white;

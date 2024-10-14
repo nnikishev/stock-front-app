@@ -5,6 +5,7 @@ import { BsFillPhoneVibrateFill } from "react-icons/bs";
 import { FaMailBulk } from "react-icons/fa";
 import { YMaps, Map, FullscreenControl, TypeSelector, Placemark } from '@pbe/react-yandex-maps';
 import './style.css'
+import image from './image.png'
 
 
 function AboutLayout() {
@@ -33,7 +34,8 @@ function AboutLayout() {
            <div className="about-contact-us">
                 <div className="map">
                 {info.additional && <>
-                    <YMaps >
+                <img className="map-image" src={image}></img>
+                    {/* <YMaps >
                         <Map
                             width={'inherit'}
                             height={'inherit'}
@@ -43,7 +45,7 @@ function AboutLayout() {
                         <TypeSelector options={{ float: "right" }} />
                         <FullscreenControl /> 
                         </Map>
-                    </YMaps>
+                    </YMaps> */}
                     </>}
                 </div>
                     <ContactForm />

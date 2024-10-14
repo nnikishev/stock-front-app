@@ -13,7 +13,15 @@
   }
   
   .about-contact-us {
-    display: flex
+    display: block flex;
+        /* display: block flex;
+    display: block flow;
+    display: block flow-root;
+    display: block grid;
+    display: inline flex;
+    display: inline flow;
+    display: inline flow-root;
+    display: inline grid; */
   }
   
   .map {
@@ -45,20 +53,20 @@
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     padding: 20px;
-    max-width: 400px;
+    width: 700px;
     margin: 0 auto;
-    height: 74ch;
+    height: ch;
   }
   .contact-form body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 10px;
-    padding: 40px;
+    padding: 20px;
     
   }
   
   .contact-form h2 {
-    margin-top: 50px;
+    margin-top: 15px;
     color: #333;
     text-align: center;
   }
@@ -68,12 +76,13 @@
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     padding: 20px;
-    max-width: 400px;
+    width: 600px;
     margin: 0 auto;
   }
   
   .contact-form div {
     margin-bottom: 15px;
+    width: inherit;
   }
   
   .contact-form label {
@@ -86,7 +95,7 @@
   .contact-form input[type="email"],
   .contact-form input[type="tel"],
   .contact-form textarea {
-    width: 100%;
+    width: 75%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -110,4 +119,8 @@
     background-color: #45a049;
   }
   
-  
+  .map-image {
+    margin: 15px;
+    height: 300px;
+    width: 500px;
+  }

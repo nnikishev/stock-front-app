@@ -31,9 +31,9 @@ const PriceFilterOffcanvas = ({ show, handleClose, minPrice, setMinPrice, maxPri
                     step={10}
                 />
                 <p>Цена: {minPrice} - {maxPrice} Р</p>
-                <Button variant="primary" onClick={handleClose}>
+                <button className='filter-button' variant="primary" onClick={handleClose}>
                     Фильтр
-                </Button>
+                </button>
             </Offcanvas.Body>
         </Offcanvas>
     );
