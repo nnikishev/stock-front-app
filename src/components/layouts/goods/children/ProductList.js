@@ -5,6 +5,7 @@ import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css'; // 
 import PriceFilterOffcanvas from './PriceFilterOffcanvas';
 import { Button } from 'react-bootstrap';
 import "../styles.css"
+import { FaWindowClose } from "react-icons/fa";
 
 const ProductList = ({ products }) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -16,9 +17,13 @@ const ProductList = ({ products }) => {
     const handleShow = () => setShowOffcanvas(true);
     const handleClose = () => setShowOffcanvas(false);
 
+    const [tag, setTag] = useState([])
     // Filter products based on the price range
+    // console.log(products)
+    // console.log(tag)
     const filteredProducts = products.filter(product => 
         product.price >= minPrice && product.price <= maxPrice
+        && (tag.length === 0 || product.tags.some(ptag => ptag.title === tag))
     );
 
     // Pagination logic
@@ -39,11 +44,17 @@ const ProductList = ({ products }) => {
                 minPrice={minPrice} 
                 setMinPrice={setMinPrice} 
                 maxPrice={maxPrice} 
-                setMaxPrice={setMaxPrice} 
+                setMaxPrice={setMaxPrice}
+                tag={tag}
+                setTag={setTag} 
             />
-
+            <div className='filters-status'>
             <div className='used-filters' >
                 <p>Цена: {minPrice} - {maxPrice} P</p>
+            </div>
+            {tag.length > 0 && <div className='used-filters'>
+                <p style={{dispaly: "flex"}}>{tag} <FaWindowClose onClick={() => setTag([])} /> </p>
+            </div>}
             </div>
 
             <div className="row">

@@ -6,8 +6,6 @@ const ProductCard = ({ product }) => {
 
 
     const toItemDesc = () => {
-        let string = String('/products/' + product.uuid)
-        console.log(string)
         navigate(product.uuid)
     }
     return (

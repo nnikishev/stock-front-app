@@ -12,7 +12,7 @@ function BasicNavbar() {
       display: cookies.token ? 'none' : 'block', // Invisible if cookie exists
   };
     const unstyle = {
-      display: !cookies.token ? 'none' : 'block', // Invisible if cookie exists
+      display: !cookies.token ? 'none' : 'block', // visible if cookie exists
   };
     const [info, setInfo] = useState([])
     useEffect(() => {
