@@ -1,5 +1,6 @@
 import { useState, useEffect} from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Spinner from 'react-bootstrap/Spinner';
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
@@ -30,7 +31,7 @@ function ControlledCarousel() {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <div><Spinner animation="border" /></div>;
   } else {
     return ( <div className='carousel-div'>
     <Carousel activeIndex={index} onSelect={handleSelect}>

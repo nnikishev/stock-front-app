@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import BasicNavbar from "../../navbar/navbar"
 import './styles.css'
 import ProductList from "./children/ProductList"
+import Spinner from 'react-bootstrap/Spinner';
+
 
 function GoodsLayout() {
     const [products, setProducts] = useState([]);
@@ -29,7 +31,7 @@ function GoodsLayout() {
     }, []);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div><Spinner animation="border" /></div>;
     }
 
     if (error) {
