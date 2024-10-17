@@ -6,13 +6,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import LoginModal from './children/LoginModal';
 
 function BasicNavbar() {
+    const [token, setToken] = useState(null);
     const [modalShow, setModalShow] = useState(false);
     const [cookies, setCookie, removeCookie] = useCookies(['token']);
+    console.log(cookies)
     const style = {
       display: cookies.token ? 'none' : 'block', // Invisible if cookie exists
   };
     const unstyle = {
-      display: !cookies.token ? 'none' : 'block', // visible if cookie exists
+      display: cookies.token ? 'block' : 'none', // visible if cookie exists
   };
     const [info, setInfo] = useState([])
     useEffect(() => {
@@ -40,7 +42,8 @@ function BasicNavbar() {
             <Nav.Link style= {style} onClick={() => setModalShow(true)} >Вход</Nav.Link>
 
             <LoginModal
-
+              token={token}
+              setToken={setToken}
               show={modalShow}
               onHide={() => setModalShow(false)}
             />

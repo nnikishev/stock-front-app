@@ -10,7 +10,7 @@ function LoginModal(props) {
 
     const handleLogin = async (name, password) => {
         // console.log('Username:', name);
-        // console.log('Password:', password);
+        console.log('props:', props);
         const response = await fetch('http://194.87.213.123:8091/api/login', {
             method: 'POST',
             headers: {
@@ -21,19 +21,21 @@ function LoginModal(props) {
         // console.log(response)
         if (response && !response.ok) {
             throw new Error('Login failed');
-        }
+        } else {
 
         const data = await response.json();
-        console.log('Login successful:', data);
-        if (response && response.ok){
-            setToken(data.token)
-            setCookie('token', token)
-        }
-        props.onHide()
+        console.log('Login successful:', data.token);
+        if (data.token !== null) {
+          await props.setToken(data.token)
+          console.log("token:", props.token)
+          console.log('props:', props);
+          await setCookie('token', props.token)
+          props.onHide()
+        }}
     };
 
    
-  return (
+return (
     <Modal
       {...props}
       size="lg"

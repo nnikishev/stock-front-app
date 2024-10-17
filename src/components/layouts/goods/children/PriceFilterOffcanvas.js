@@ -3,7 +3,8 @@ import { Offcanvas } from 'react-bootstrap';
 import RangeSlider from 'react-bootstrap-range-slider';
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import Tag from './Tag';
-const PriceFilterOffcanvas = ({ show, handleClose, minPrice, setMinPrice, maxPrice, setMaxPrice, tag, setTag }) => {
+const PriceFilterOffcanvas = ({ show, handleClose, minPrice, setMinPrice, 
+    maxPrice, setMaxPrice, tag, setTag, selectedTags, setSelectedTags }) => {
     
     const [tags, setTags] = useState([])
 
@@ -14,24 +15,30 @@ const PriceFilterOffcanvas = ({ show, handleClose, minPrice, setMinPrice, maxPri
     }, [])
 
 
-    const [selectedTags, setSelectedTags] = useState([]);
+    
     const toggleTag = (uuid) => {
-        console.log(selectedTags);
-        setSelectedTags((prev) => {
-            prev = []
-            console.log(uuid)
-            setTag(uuid)
-            if (prev.includes(uuid)) {
-                return prev.filter(tag => tag !== uuid); // Deselect if already selected
-            }
-            prev.push(uuid)
-            return prev; // Select if not already selected
-        });
+        // console.log("выбранныеЭ теги", selectedTags);
+        // console.log(uuid)
+        if (selectedTags.includes(uuid)) {
+            console.log("before ", tag)
+            console.log("before ", selectedTags)
+            setTag(tag.filter(function(item) {
+                return item !== uuid}))
+            
+            setSelectedTags(selectedTags.filter(function(item) {
+                return item !== uuid
+            }))
+            console.log("after", tag)
+            console.log("after", selectedTags)
+        } else {
+            console.log('pam')
+            setTag([...tag, uuid])
+            setSelectedTags([...selectedTags, uuid])
+            
+        }
+       
     };
 
-    // const handleTag = (tag, index) => {
-        
-    // }
 
     return (
         <Offcanvas show={show} onHide={handleClose}>

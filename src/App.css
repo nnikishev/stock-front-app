@@ -28,22 +28,22 @@
 .carousel-item h3 {
   font-size: 60px;
   color: white;
-  text-shadow: 1 1 10px #000000;
-  transition: color;
+  /* text-shadow: 1 1 10px #000000; */
+  text-shadow: 1px 4px 5px black, 1px 4px 5px white;
+  transition: transform 0.2s;
 }
 
 .carousel-item h3:hover {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 4px 5px black, 1px 4px 5px white;
+  transform: scale(1.05);
 }
 
 .carousel-item p {
   font-size: 24px;
   color: white;
-  text-shadow: 0 0 5px #000000;
+  text-shadow: 1px 4px 5px black, 1px 4px 5px white;
+  transition: transform 0.2s;
 }
 
 .carousel-item p:hover {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 4px 5px black, 1px 4px 5px white;
+  transform: scale(1.05);
 }

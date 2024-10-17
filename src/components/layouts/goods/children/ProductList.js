@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { RangeSlider } from 'react-bootstrap-range-slider';
 import ProductCard from './ProductCard';
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css'; // Import the CSS
 import PriceFilterOffcanvas from './PriceFilterOffcanvas';
-import { Button } from 'react-bootstrap';
 import "../styles.css"
 import { FaWindowClose } from "react-icons/fa";
 
@@ -17,14 +15,21 @@ const ProductList = ({ products }) => {
     const handleShow = () => setShowOffcanvas(true);
     const handleClose = () => setShowOffcanvas(false);
 
+    const [selectedTags, setSelectedTags] = useState([]);
     const [tag, setTag] = useState([])
-    // Filter products based on the price range
-    // console.log(products)
-    // console.log(tag)
+
     const filteredProducts = products.filter(product => 
         product.price >= minPrice && product.price <= maxPrice
-        && (tag.length === 0 || product.tags.some(ptag => ptag.title === tag))
+        && (tag.length === 0 || product.tags.some(ptag => tag.includes(ptag.title)))
     );
+    const dropTag = (title) => {
+        let wihout_tag = tag
+        wihout_tag = wihout_tag.filter(item => item !== title)
+        setTag(wihout_tag)
+        setSelectedTags(selectedTags.filter(item => item !== title))
+    }
+        
+
 
     // Pagination logic
     const indexOfLastProduct = currentPage * itemsPerPage;
@@ -46,15 +51,18 @@ const ProductList = ({ products }) => {
                 maxPrice={maxPrice} 
                 setMaxPrice={setMaxPrice}
                 tag={tag}
-                setTag={setTag} 
+                setTag={setTag}
+                selectedTags={selectedTags}
+                setSelectedTags={setSelectedTags}
             />
             <div className='filters-status'>
             <div className='used-filters' >
-                <p>Цена: {minPrice} - {maxPrice} P</p>
+                <p className='used-filters-p'>Цена: {minPrice} - {maxPrice} P</p>
             </div>
-            {tag.length > 0 && <div className='used-filters'>
-                <p style={{dispaly: "flex"}}>{tag} <FaWindowClose onClick={() => setTag([])} /> </p>
-            </div>}
+            {tag.length > 0 && tag.map((t, key) =>( <div className='used-filters'>
+                <p key={key} style={{dispaly: "flex"}}>{t} <FaWindowClose onClick={() => dropTag(t)} /> </p>
+            </div>
+            ))}
             </div>
 
             <div className="row">
