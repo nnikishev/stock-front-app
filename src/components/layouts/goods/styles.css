@@ -55,6 +55,14 @@
     margin-bottom: 20px;
 }
 
+.offcanvas-body h5 {
+  font-size: 16px;
+}
+
+.offcanvas-body p {
+  font-size: 13px;
+}
+
 .filters-status {
   display: flex;
 }

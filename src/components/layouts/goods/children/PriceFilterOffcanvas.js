@@ -7,7 +7,6 @@ const PriceFilterOffcanvas = ({ show, handleClose, minPrice, setMinPrice,
     maxPrice, setMaxPrice, tag, setTag, selectedTags, setSelectedTags }) => {
     
     const [tags, setTags] = useState([])
-
     useEffect( () => {
         fetch("http://194.87.213.123:8000/api/tags/")
         .then((response) => response.json())
