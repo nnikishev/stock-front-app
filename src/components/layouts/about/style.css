@@ -1,5 +1,5 @@
 .about {
-
+  margin: 10px;
   }
   
   .contacts {
@@ -12,38 +12,30 @@
     width: 100%;
   }
   
-  .about-contact-us {
-    display: block;
-    /* grid-template-columns: auto auto; */
-        /* display: block flex;
-    display: block flow;
-    display: block flow-root;
-    display: block grid;
-    display: inline flex;
-    display: inline flow;
-    display: inline flow-root;
-    display: inline grid; */
-  }
+
   
   .map {
+    /* display: flex; */
+    /* float: left; */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     border-radius: 20px;
     margin: auto;
-        /* height: 50vh; */
-    /* width: 60vw; */
   }
 
-  .map div {
-    margin: auto;
-    height: inherit;
-    width: inherit;
-  }
   .map img {
-    height: inherit;
-    width: 70%;
+    margin: 15px;
+    /* float: left; */
+    max-width: 640px;
+    height: 80%;
+    width: 80%;
   }
   
+  /* .map h3 {
+    text-align: left;
+    margin-left: 20px;
+  } */
   .contacts-group {
+    /* float: left; */
     padding-left: 50px;
     text-align: left;
     transition: transform 0.2s;
@@ -54,13 +46,13 @@
   }
   
   .contact-form {
+    /* float: right; */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     padding: 20px;
-    width: auto;
-    margin: 0 auto;
-    height: ch;
+    margin: 20px;
+    /* height: ch; */
   }
   .contact-form body {
     font-family: Arial, sans-serif;
@@ -124,8 +116,8 @@
     background-color: #45a049;
   }
   
-  .map-image {
+  /* .map-image {
     margin: 15px;
     height: 300px;
     width: 500px;
-  }
+  } */

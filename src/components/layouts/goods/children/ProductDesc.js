@@ -26,13 +26,15 @@ const ProductCard = ({ product }) => {
                 <ImageGallery images={product.attachments} />
                 <div>
                 <p className="card-text">{product.description}</p>
-                {/* <h6>Характеристики:</h6>
+                {product.properties && <>
+                <h6>Характеристики:</h6>
                 <ul>
                     {Object.entries(product.properties).map(([key, value], index) => (
-                        <li key={index}><strong>{key}:</strong> {value}</li>
+                        <li key={index}><strong>{key}</strong> {value}</li>
                     ))}
-                </ul> */}
+                </ul>
                 <p className="font-weight-bold">Цена: {product.price} Р</p>
+                </>}
                 </div>
             </div>
         </div>
