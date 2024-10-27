@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
                         <li key={index}><strong>{key}</strong> {value}</li>
                     ))}
                 </ul>
-                <p className="font-weight-bold">Цена: {product.price} Р</p>
+                {/* <p className="font-weight-bold">Цена: {product.price} Р</p> */}
                 </>}
                 </div>
             </div>

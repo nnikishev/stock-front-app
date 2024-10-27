@@ -56,9 +56,9 @@ const ProductList = ({ products }) => {
                 setSelectedTags={setSelectedTags}
             />
             <div className='filters-status'>
-            <div className='used-filters' >
+            {/* <div className='used-filters' >
                 <p className='used-filters-p'>Цена: {minPrice} - {maxPrice} P</p>
-            </div>
+            </div> */}
             {tag.length > 0 && tag.map((t, key) =>( <div className='used-filters'>
                 <p key={key} style={{dispaly: "flex"}}>{t} <FaWindowClose onClick={() => dropTag(t)} /> </p>
             </div>

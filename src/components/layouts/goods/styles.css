@@ -6,11 +6,10 @@
 
 .card-item {
     display: inline-grid;
-    margin: 5px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    max-width: 320px;
-    max-height: 380px;
+    height: 100%;
+
     transition: transform 0.2s;
 }
 

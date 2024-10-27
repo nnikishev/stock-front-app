@@ -45,7 +45,7 @@ const PriceFilterOffcanvas = ({ show, handleClose, minPrice, setMinPrice,
                 <Offcanvas.Title>Фильтры</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-                <h5>Мин цена: {minPrice} Р </h5>
+                {/* <h5>Мин цена: {minPrice} Р </h5>
                 <RangeSlider
                     value={minPrice}
                     min={0}
@@ -65,7 +65,7 @@ const PriceFilterOffcanvas = ({ show, handleClose, minPrice, setMinPrice,
                     tooltip={"on"}
                     step={10}
                 />
-                <p>Цена: {minPrice} - {maxPrice} Р</p>
+                <p>Цена: {minPrice} - {maxPrice} Р</p> */}
                 <div className='tags-cloud'>
                 {tags && tags.map((item, index) => (
 

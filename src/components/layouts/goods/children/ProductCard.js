@@ -13,9 +13,11 @@ const ProductCard = ({ product }) => {
             <div className="card-item" onClick={() => toItemDesc()}>
                 <img src={product.attachments[0]} className="card-img-top" alt={product.name} />
                 <div className="card-list-body">
+                    <br />
                     <h5 className="card-title">{product.name}</h5>
-                    <p className="card-text">{product.description}</p>
-                    <p className="font-weight-bold">Цена: {product.price} Р</p>
+                    <p className="card-text">{product.description.slice(0, 100)}...</p>
+                    <br />
+                    {/* <p className="font-weight-bold">Цена: {product.price} Р</p> */}
                 </div>
             </div>
         </div>
