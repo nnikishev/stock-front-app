@@ -39,7 +39,7 @@ function AboutLayout() {
                     <h3>Мы на карте</h3>
                 <img className="map-image" src={image}></img>
                 </div>
-                <button onClick={() => setModalShow(true)}>Связаться с нами</button>
+                <button className='contact-us-button' onClick={() => setModalShow(true)}>Связаться с нами</button>
                 <ContactUsModal 
                     show={modalShow}
                     onHide={() => setModalShow(false)}

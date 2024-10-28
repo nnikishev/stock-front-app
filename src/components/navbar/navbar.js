@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react';
-import { useCookies } from 'react-cookie';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import LoginModal from './children/LoginModal';
 import image from './children/logo.jpg'
+import ProfileMenu from './children/Dropdown';
+import { useCookies } from 'react-cookie';
+
 
 function BasicNavbar() {
+    const [cookies, setCookie, removeCookie] = useCookies(['token']);
+
     const [token, setToken] = useState(null);
     const [modalShow, setModalShow] = useState(false);
-    const [cookies, setCookie, removeCookie] = useCookies(['token']);
     const imgStyle = {
       width: "36px",
       height: "36px",
@@ -26,9 +29,7 @@ function BasicNavbar() {
         .then((response) => response.json())
         .then((json) => setInfo(json))
 }, [])
-  function logout() { 
-    removeCookie(["token"])
-  }
+  
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -58,7 +59,9 @@ function BasicNavbar() {
             </Nav.Item>
           <Nav.Item>
             <Nav.Link style= {style} href="regisration">Регистрация</Nav.Link>
-            <Nav.Link style= {unstyle} onClick={() => logout()}>Выход</Nav.Link>
+            <div style={unstyle} >
+            <ProfileMenu />
+            </div>
           </Nav.Item>
           </Nav>
         </Navbar.Collapse>
