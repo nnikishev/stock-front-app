@@ -50,8 +50,8 @@ function BasicNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">   
             {/* <Nav.Link href="/">Главная</Nav.Link> */}
-            <Nav.Link href="products">Наша продукция</Nav.Link>
-            <Nav.Link href="about">О нас</Nav.Link>
+            <Nav.Link href="/products">Наша продукция</Nav.Link>
+            <Nav.Link href="/about">О нас</Nav.Link>
             </Nav>
           <Nav className="justify-content-end" activeKey="/home">
             <Nav.Item>
