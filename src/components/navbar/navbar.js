@@ -12,6 +12,12 @@ function BasicNavbar() {
     const [cookies, setCookie, removeCookie] = useCookies(['token']);
 
     const [token, setToken] = useState(null);
+    const handleSetToken = (token) => {
+      console.log("handlesettoken", token)
+      setToken(token)
+      console.log("handlesettoken after", token)
+    }
+    
     const [modalShow, setModalShow] = useState(false);
     const imgStyle = {
       width: "36px",
@@ -52,7 +58,7 @@ function BasicNavbar() {
               <Nav.Link style= {style} onClick={() => setModalShow(true)} >Вход</Nav.Link>
               <LoginModal
                 token={token}
-                setToken={setToken}
+                setToken={handleSetToken}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
               />

@@ -27,10 +27,10 @@ const ProductCard = ({ product }) => {
                 <div>
                 <p className="card-text">{product.description}</p>
                 {product.properties && <>
-                <h6>Характеристики:</h6>
-                <ul>
+                <h5>Характеристики:</h5>
+                <ul className='product-stats-list'>
                     {Object.entries(product.properties).map(([key, value], index) => (
-                        <li key={index}><strong>{key}</strong> {value}</li>
+                        <li className='product-stats' key={index}><strong>{key}</strong> {value}</li>
                     ))}
                 </ul>
                 {/* <p className="font-weight-bold">Цена: {product.price} Р</p> */}

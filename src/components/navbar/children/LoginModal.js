@@ -7,7 +7,7 @@ import "./styles.css"
 function LoginModal(props) {
     const [cookies, setCookie, removeCookie] = useCookies(['token']);
     const [token, setToken] = useState(null);
-
+    console.log("modal 10", props.token)
     const handleLogin = async (name, password) => {
         // console.log('Username:', name);
         console.log('props:', props);
@@ -17,21 +17,15 @@ function LoginModal(props) {
             'Content-Type': 'application/json',
             },
             body: JSON.stringify({name: name, password: password }),
-        });
-        // console.log(response)
-        if (response && !response.ok) {
-            throw new Error('Login failed');
-        } else {
-
-        const data = await response.json();
-        console.log('Login successful:', data.token);
-        if (data.token !== null) {
-          await props.setToken(data.token)
-          console.log("token:", props.token)
-          console.log('props:', props);
-          await setCookie('token', props.token)
+        }).then(res => res.json()).catch((err) => {throw new Error('Login failed')});
+        console.log("123", response)
+        // const data = await response.json();
+        // console.log('Login successful:', data.token);
+        if (response.token !== null) {
+          props.setToken(response.token)
+          setCookie('token', response.token)
           props.onHide()
-        }}
+        }
     };
 
    

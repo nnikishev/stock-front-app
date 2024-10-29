@@ -115,8 +115,14 @@
   grid-template-columns: auto auto;
 }
 .product-desc-images {
-  width: 80%;
+  width: 100%;
 
+}
+
+.card-text {
+  margin-left: 30px;
+  font-family: system-ui;
+  text-align: justify;
 }
 
 .product-desc-images img {
@@ -125,6 +131,12 @@
   object-fit: cover;
 }
 
+.product-stats-list {
+  list-style: none;
+}
+.product-stats {
+  text-align: left;
+}
 .tags-cloud {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
