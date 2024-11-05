@@ -6,6 +6,7 @@ import { Carousel } from 'react-bootstrap';
 // ImageGallery Component for displaying images
 const ImageGallery = ({ images }) => {
     return (
+        <div className='product-carousel'>
         <Carousel className="product-desc-images" slide={false}>
         {images.map((image, index) => (
             <Carousel.Item key={index}>
@@ -15,6 +16,7 @@ const ImageGallery = ({ images }) => {
             </Carousel.Item>
         ))}
         </Carousel>
+        </div>
     );
 };
 

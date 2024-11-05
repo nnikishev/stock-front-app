@@ -108,6 +108,7 @@
   margin: 15px;
 }
 
+@media (orientation: landscape) {
 .card-body {
   padding: 20px;
   margin: 20px;
@@ -118,6 +119,8 @@
   width: 100%;
 
 }
+}
+
 
 .card-text {
   margin-left: 1.5em;
