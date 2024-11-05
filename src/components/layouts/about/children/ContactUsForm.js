@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
-function ContactForm() {
+
+function ContactForm({onFeedback}) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [contactNumber, setContactNumber] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Handle form submission logic
-    console.log({ name, email, message, contactNumber });
+    onFeedback(name, email, contactNumber, message)
   };
 
   return (

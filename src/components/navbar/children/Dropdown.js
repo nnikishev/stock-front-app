@@ -15,11 +15,11 @@ function ProfileMenu() {
               title="Профиль"
               menuVariant="light"
             >
-              <NavDropdown.Item href="#action/3.1">Профиль</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              {/* <NavDropdown.Item href="#action/3.1">Профиль</NavDropdown.Item> */}
+              <NavDropdown.Item href="/feedbacks">
                 Обратная связь
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Корзина</NavDropdown.Item>
+              {/* <NavDropdown.Item href="#action/3.3">Корзина</NavDropdown.Item>s */}
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
               <Nav.Link onClick={() => logout()}>Выход</Nav.Link>

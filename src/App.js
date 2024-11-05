@@ -7,6 +7,7 @@ import MainLayout from './components/layouts/home/HomeLayout';
 import AboutLayout from './components/layouts/about/AboutLayout';
 import GoodsLayout from './components/layouts/goods/productsList';
 import ProductDetail from './components/layouts/goods/productDetail';
+import FeedbackLayout from './components/layouts/FeedBacks/FeedbackLayout';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='about' element={<AboutLayout />}> </Route>
           <Route path='products' element={<GoodsLayout/>}></Route>
           <Route path='products/:uuid' element={<ProductDetail/>}></Route>
+          <Route path='feedbacks' element={<FeedbackLayout/>}></Route>
         </Routes>
     </div>
   </BrowserRouter>

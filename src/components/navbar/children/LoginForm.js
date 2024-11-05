@@ -5,12 +5,8 @@ const LoginForm = ({ onLogin }) => {
     const [password, setPassword] = useState('');
 
     const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent the default form submission
-        // Pass the username and password back to the parent component
+        event.preventDefault();
         onLogin(name, password);
-        // Reset fields (optional)
-        // setName('');
-        // setPassword('');
     };
     const handleKeyPress = (event) => {
         if(event.key === 'Enter'){
