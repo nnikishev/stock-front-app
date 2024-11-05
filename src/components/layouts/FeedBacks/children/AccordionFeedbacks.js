@@ -49,12 +49,16 @@ function AccordionFeedbacks() {
         {feedbacks.map((feedback, index) => (
             <Accordion.Item eventKey={index}>
                 <Accordion.Header>
-                    {prettifyTime(feedback.created_at)} / 
-                    {feedback.fio}/
-                    {feedback.phone}
+                    {prettifyTime(feedback.created_at)} / &nbsp;
+                    {feedback.fio}
+                    
                     </Accordion.Header>
                 <Accordion.Body>
-                    {feedback.message}
+                    Телефон: {feedback.phone}
+                    <br></br>
+                    Email: {feedback.email}
+                    <br></br>
+                    Сообщение: {feedback.message}
                 </Accordion.Body>
             </Accordion.Item>
         ))}

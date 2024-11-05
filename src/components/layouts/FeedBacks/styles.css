@@ -1,3 +1,7 @@
 .feedbacks {
     margin: 20px;
 }
+
+.accordion-body {
+    text-align: left;
+}
